@@ -22,7 +22,7 @@ altura = int(input('Digite el número para la altura del rectángulo: '))
 rectangulo1 = Rectangulo(base, altura)
 print(f'El área del rectángulo es: {rectangulo1.calcular_area()}')
 
-
+######################################################################################
 # Carolina Belen Delgado
 # Ejercicio 05: Crear una funcion para sumar valores recibidos de tipo numericos,
 # Utilizando argumentos variabes args como parametro de a
@@ -34,3 +34,32 @@ def sumar_valor(args, in_args=):# Recibimos una cantidad de parametros indefinid
  # Iteramos cada elemento
  for valor in_args:
  result
+
+######################################################################################
+# Walter David Torres
+# Ejercicio "Clase Cubo"
+
+class Cubo:
+    """
+    Crear la clase cubo con los atributos, ancho, alto, profundidad, con
+    un método calcular_volumen que tendrá la fórmula:
+    volumen = ancho * altura * profundidad
+    que el usuario ingrese los valores.
+    """
+
+    def _init_(self, ancho, altura, profundidad):
+        self.ancho = ancho
+        self.altura = altura
+        self.profundidad = profundidad
+
+    def calcular_volumen(self):
+        return self.ancho * self.altura * self.profundidad
+
+
+ancho = int(input('Digite la medida del ancho del cubo: '))
+altura = int(input('Digite la medida de la altura del cubo: '))
+profundidad = int(input('Digite la medida de la profundidad del cubo: '))
+cubo1 = Cubo(ancho, altura, profundidad)
+print(f'El volumen del cubo es: {cubo1.calcular_volumen()}')
+
+#####################################################################################
