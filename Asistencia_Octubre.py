@@ -62,4 +62,16 @@ profundidad = int(input('Digite la medida de la profundidad del cubo: '))
 cubo1 = Cubo(ancho, altura, profundidad)
 print(f'El volumen del cubo es: {cubo1.calcular_volumen()}')
 
-#####################################################################################
+##################################################################################
+# Giangrave Facundo
+#Ejercicio 4: Calculadora de Impuestos
+
+def calcular_total_pago(pago_sin_impuesto, impuesto):
+    pago_total = pago_sin_impuesto + pago_sin_impuesto * (impuesto/100)
+    return pago_total
+
+# Ejecutamos la función
+pago_sin_impuesto = float(input('Digite el pago sin impuestos: '))
+impuesto = float(input('Digite el monto del impuesto a plicar: '))
+pago_con_impuesto = calcular_total_pago(pago_sin_impuesto, impuesto)
+print('El pago con impuesto es: ', pago_con_impuesto)
