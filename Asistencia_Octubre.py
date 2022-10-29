@@ -75,3 +75,66 @@ pago_sin_impuesto = float(input('Digite el pago sin impuestos: '))
 impuesto = float(input('Digite el monto del impuesto a plicar: '))
 pago_con_impuesto = calcular_total_pago(pago_sin_impuesto, impuesto)
 print('El pago con impuesto es: ', pago_con_impuesto)
+
+
+#------------------------------------------------------------------ SABA JUAN AGUSTIN ------------------------------------------------------------------
+class Persona:  # Creamos una clase
+
+    def __init__(self, nombre, apellido, dni, edad, *args, **kwargs):  # Definimos el método init con los parámetros
+        self.nombre = nombre
+        self.apellido = apellido
+        self._dni = dni  # Este atributo está encapsulado (de una manera sugerida)
+        self.edad = edad
+        self.args = args
+        self.kwargs = kwargs
+
+    # El método __init__ es el primer método que se ejecuta cuando se crea un objeto.
+    # El método __init__ se llama automáticamente, es decir es imposible olvidarse de llamarlo ya que se llamará
+    # automaticamente.
+    # Dentro de la clase Persona definimos un método. <self> es el parámetro por default y es la referencia al objeto
+    # que se va a crear.
+    # Creamos los atributos del objeto Persona dentro de un método sin embargo no son atributos de una clase.
+    # No es común asignar valores por default a los atributos como código duro.
+    # CÓMO VA A DIFERENCIAR NUESTRO MÉTODO CUÁL ES ELS Y CUÁL ES EL ATRIBUTO Y CUÁL ES LA VARIABLE?
+    # self.nombre va a ser el atributo y nombre va a ser la variable.
+
+    def mostrar_detalle(self):  # self es lo mismo que la palabra 'this' en JAVA
+        print(f'La clase Persona tiene los siguientes datos: {self.nombre} {self.apellido} {self._dni} {self.edad}, la dirección '
+              f'es: {self.args}, los datos importantes son: {self.kwargs}')
+
+
+persona1 = Persona('Agustin', 'Saba', 35555555, 31)
+# La parte izquierda es nuestra variable denominada persona1 que va a contener el objeto de tipo Persona.
+# El lado derecho es un constructor que apunta al método init y tiene argumentos el constructor
+
+print(persona1.nombre, persona1.apellido, persona1.edad)
+
+persona2 = Persona('Osvaldo', 'Giordanini', 36666666, 45)
+
+print(persona2.nombre, persona2.apellido, persona2.edad)
+
+# Modificamos los valores de los atributos de persona1
+persona1.nombre = 'Nicolas'
+persona1.apellido = 'Tarditti'
+persona1.edad = '45'
+
+print(persona1.nombre, persona1.apellido, persona1.edad)
+
+persona1.mostrar_detalle()  # La referencia se pasa de manera automática
+persona2.mostrar_detalle()
+
+# Persona.mostrar_detalle() Debemos pasarle una referencia para el self o dará error
+
+# EN PYTHON PODEMOS CREAR ATRIBUTOS QUE NO ESTÁN DEFINIDOS EN EL MÉTODO INIT (SUPERFICIALES)$$$$$$$$$$PRÁCTICAS VIEJAS
+persona1.telefono = '2614444444'  # creamos el atributo 'SUPERFICIAL' teléfono, es decir, el objeto persona2 no va a
+# tener este atributo
+
+print(persona1.telefono)
+
+
+persona3 = Persona('Rogelio', 'Romero', 37777777, 22, 'Teléfono', '2614444444', 'Calle Lopez', 823, 'Manzana', 77, 'Casa', 18, Altura=1.83, Peso=105, Cfavorito='Azul', Auto='Citroen', Modelo=2021)
+persona3.mostrar_detalle()
+# print(persona3._dni) No se debe utilizar este atributo o se debe tratar con cuidado (ya que está encapsulado)
+# persona.__nombre Este atributo está totalmente encapsulado
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
