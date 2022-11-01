@@ -161,3 +161,63 @@ pago_sin_impuesto = float(input('Digite el pago sin impuesto: '))
 impuesto = float(input('Digite el monto del impuesto a aplicar: '))
 pago_con_impuesto = calcular_total_pago(pago_sin_impuesto,impuesto)
 print(f'El pago con impuesto es: {pago_con_impuesto}')
+
+************************************************************COSTILLA CELINA PRIMERA PARTE POO****************************************************************************
+class Persona: #Creamos una clase
+   def __init__(self,nombre,apellido,edad):
+     self.nombre= nombre
+     self.apellido=apellido
+     self.edad= edad
+   def mostrar_detalle(self):
+      print(f'Persona: {self.nombre}{self.apellido} {self.edad}')
+
+
+print(Persona)
+persona1=Persona("Celina","Costilla",25)
+print(persona1.apellido)
+print(persona1.nombre)
+print(persona1.edad)
+persona2=Persona("Ariel","Betancud",35)
+print(f'Objeto dos clase Persona: {persona2.nombre} {persona2.apellido} Su edad es: {persona2.edad}')
+ 
+ #Modificar atributos 
+
+persona1.nombre="Liliana"
+persona1.apellido="Garzón"
+persona1.edad: 45
+print(f'Objeto uno clase Persona: {persona2.nombre} {persona2.apellido} Su edad es: {persona2.edad}')
+
+*************************************************SEGUNDA PARTE POO*********************************************************
+class Aritmetica:
+    """
+    El nombre de este tipo de comentario es DocString
+    Esto es documentacion de la clase en python
+    Haremos en esta clase suma, resta ,multiplicacion y más
+
+    """
+
+    def __init__(self,operandoA,operandoB):
+        self.operandoA=operandoA
+        self.operandoB=operandoB
+     #Metodo para sumar
+    def sumar(self):
+        return self.operandoA+self.operandoB
+    def restar(self):
+        return self.operandoA - self.operandoB
+    def multiplicar(self):
+        return self.operandoA * self.operandoB 
+    def dividir(self):
+        return self.operandoA / self.operandoB       
+
+aritmetica1=Aritmetica(7,9)   # le pasamos los parametros para los operandos     
+print(f'La suma de los números es: {aritmetica1.sumar()}')
+print(f'La resta de los números es: {aritmetica1.restar()}') 
+print(f'La multiplicación de los números es: {aritmetica1.multiplicar()}') 
+print(f'La división de los números es {aritmetica1.dividir():.2f}') 
+
+#Los atributos son características y los métodos son comportamientos que tendrán los objetos
+persona1.mostrar_detalle()
+
+# cargar atributos al objeto persona 1
+persona1.telefono='123456' #hemos creado un atributo del objeto persona1
+print(persona1.telefono)
