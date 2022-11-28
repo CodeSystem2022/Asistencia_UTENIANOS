@@ -1,1 +1,34 @@
+[8:49 a. m., 28/11/2022] CAROLINA BELÉN DELGADO: // Degado Carolina Ejercicio 7
+ //Clase 10
+//  Operaciones  java
+package operaciones;
 
+public class Operaciones {        
+    public static int sumar(int a, int b){
+        System.out.println("Método para sumar enteros ");
+        return a + b;
+    }
+    
+    public static double sumar (double a, double b) {
+        System.out.println("Método para sumar double");
+        return a + b;
+    }
+}
+[8:51 a. m., 28/11/2022] CAROLINA BELÉN DELGADO: /*continuacion  operaciones. java con testOperaciones. java
+ * @Carolina Delgado
+ */
+package test;
+import operaciones.Operaciones;
+public class TestOperaciones {
+    public static void main(String[] args){
+       var resultado = Operaciones.sumar(7, 9) ;
+       System.out.println("resultado = " + resultado) ;
+               
+       var resultado2 = Operaciones.sumar(5.0, 7) ;     
+       System.out.println("resultado2 = " + resultado2) ;
+               
+       var resultado3= Operaciones.sumar(8, 6L) ; 
+       System.out.println("resultado3 = " + resultado3);
+       
+
+}
