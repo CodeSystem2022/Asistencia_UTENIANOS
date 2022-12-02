@@ -103,3 +103,66 @@ public class arreglo_1 {
         }
         
     }
+    
+    ///////////////////////////////////////////////////////////ASISTENCIA COSTILLA CELINA //////////////////////////////////////////////////
+    
+    package arreglos;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author CELINA
+ */
+public class Arreglos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         //Ejercicio 1 : Leer 5 números , guardarlos en un arregloy mostrarlos en el mismo orden  introducidos
+         
+//        
+//         Scanner sc= new Scanner(System.in);
+//         float [] arregloNum = new float[5];
+//         
+//         System.out.println("Vamos a guardar los números en un arreglo");
+//         
+//         for (int i = 0; i <5; i++) {
+//             System.out.println("Digite el "+ (i+1)+ " número:");
+//             arregloNum[i]= sc.nextFloat();
+//        }
+//         
+//         //Mostramos los números del arreglo
+//         System.out.println("El arreglo de números ingresados es:");
+//         
+//         for(float unNumero: arregloNum){
+//             System.out.println(unNumero + "");
+//         }
+//         System.out.println("\n");
+//    }
+    
+    
+    //Ejercicio 2 : Leer 5 números , guardarlos en un arreglo y mostrarlos en  orden inverso al  introducido.
+      
+    Scanner sc= new Scanner(System.in);
+         float [] arregloNum = new float[5];
+         
+         System.out.println("Vamos a guardar los números en un arreglo");
+         
+         for (int i = 0; i <5; i++) {
+             System.out.println("Digite el "+ (i+1)+ " número:");
+             arregloNum[i]= sc.nextFloat();
+        }
+    
+    //Mostramos los números del arreglo en orden inverso
+         System.out.println("El arreglo de números ingresados es:");
+         
+         for(int i =4; i>=0;i--){
+             System.out.println(arregloNum[i]+ "");
+         }
+          System.out.println("\n");
+    }
+    
+    
+}
