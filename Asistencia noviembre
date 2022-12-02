@@ -74,3 +74,32 @@ public class ej1matrizTranspuesta {
         System.out.println();
 }
 }
+
+*****************************************************************************
+//LECCIÓN 11 - EJERCICIO 1
+//PUTRINO AGUSTIN
+
+package arreglo_1;
+import java.util.Scanner;
+
+/**
+Leer 5 números, guardarlos en un array y mostrarlos en el mismo orden introducido
+ */
+public class arreglo_1 {
+    
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float [] array = new float [5];
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Ingrese el valor del "+(i+1)+"° Número: ");
+            array[i] = sc.nextFloat();
+        }
+        
+        System.out.println("\nMostrando números ingresados: ");
+        for (float i:array) {
+            System.out.println(i+" ");
+        }
+        
+    }
