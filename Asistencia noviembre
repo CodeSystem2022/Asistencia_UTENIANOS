@@ -166,3 +166,37 @@ public class Arreglos {
     
     
 }
+/////////////////////////////////////////////////////////////////////SABA JUAN AGUSTÍN/////////////////////////////////////////////////////////////////////
+package test;
+
+public class TestArreglos {
+    public static void main(String[] args) {
+        
+        int edades[] = new int [3]; // lado derecho: instanciamos un objeto de tipo Object con dimensión = 3
+                                    // lado izquierdo: declaramos la variable 
+                                    // no puede modificarse su tamaño o dimensión. No es dinámica
+        
+        System.out.println("edades = " + edades); //nos muestra la dirección de memoria donde se guarda nuestro arreglo
+        
+        //Agregamos un elemento en la posicion cero (0) del arreglo denaminado edades
+        edades[0] = 17;
+        System.out.println("edades[0] = " + edades[0]);
+        
+        edades[1] = 10;
+        System.out.println("edades[1] = " + edades[1]);
+        
+        edades[2] = 2000;
+        System.out.println("edade[2] = " + edades[2]);
+        
+        /*System.out.println("edades[4]= " + edades[4]);
+        //si queremos acceder a una posición que no esta definida (es decir una posición que esté fuera del rango o dimensión)
+          por ejemplo: edades[4], cuando ejecutemos el código va a arrojar el siguiente mensaje:
+            Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 3
+            at test.TestArreglos.main(TestArreglos.java:23)*/
+        
+        for (int i = 0; i < edades.length; i++){ // si coloco <= debo restarle 1 posicion a la longitud (lenght) de mi arreglo
+            System.out.println("edades y sus elementos " + i + ": " + edades[i] );
+        }
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
